@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{25B386F6-A506-4B30-BDBB-0FC32ACB6919}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Trabalho_HeroiseViloes</RootNamespace>
+    <AssemblyName>Trabalho HeroiseViloes</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\DAO\amigoDAO.cs" />
+    <Compile Include="Model\DAO\vilaoDAO.cs" />
+    <Compile Include="View\FormsHeroi\inclusaoHeroi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsHeroi\inclusaoHeroi.Designer.cs">
+      <DependentUpon>inclusaoHeroi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\DAO\conexao.cs" />
+    <Compile Include="Model\DAO\heroiDAO.cs" />
+    <Compile Include="Model\DAO\IDAO.cs" />
+    <Compile Include="Model\Entities\pessoaMae.cs" />
+    <Compile Include="Model\Entities\amigoHeroi.cs" />
+    <Compile Include="Model\Entities\superHeroi.cs" />
+    <Compile Include="Model\Entities\superVilao.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="View\FormsAmigoHeroi\consultaAmigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsAmigoHeroi\consultaAmigo.Designer.cs">
+      <DependentUpon>consultaAmigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsAmigoHeroi\inclusaoAmigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsAmigoHeroi\inclusaoAmigo.Designer.cs">
+      <DependentUpon>inclusaoAmigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsAmigoHeroi\alteracaoAmigo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsAmigoHeroi\alteracaoAmigo.Designer.cs">
+      <DependentUpon>alteracaoAmigo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsHeroi\alteracaoHeroi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsHeroi\alteracaoHeroi.Designer.cs">
+      <DependentUpon>alteracaoHeroi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsHeroi\consultaHeroi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsHeroi\consultaHeroi.Designer.cs">
+      <DependentUpon>consultaHeroi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsVilao\consultaVilao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsVilao\consultaVilao.Designer.cs">
+      <DependentUpon>consultaVilao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsVilao\inclusaoVilao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsVilao\inclusaoVilao.Designer.cs">
+      <DependentUpon>inclusaoVilao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormsVilao\alteracaoVilao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormsVilao\alteracaoVilao.Designer.cs">
+      <DependentUpon>alteracaoVilao.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\FormsAmigoHeroi\alteracaoAmigo.resx">
+      <DependentUpon>alteracaoAmigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsAmigoHeroi\consultaAmigo.resx">
+      <DependentUpon>consultaAmigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsAmigoHeroi\inclusaoAmigo.resx">
+      <DependentUpon>inclusaoAmigo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsHeroi\alteracaoHeroi.resx">
+      <DependentUpon>alteracaoHeroi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsHeroi\consultaHeroi.resx">
+      <DependentUpon>consultaHeroi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsHeroi\inclusaoHeroi.resx">
+      <DependentUpon>inclusaoHeroi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsVilao\alteracaoVilao.resx">
+      <DependentUpon>alteracaoVilao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsVilao\consultaVilao.resx">
+      <DependentUpon>consultaVilao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormsVilao\inclusaoVilao.resx">
+      <DependentUpon>inclusaoVilao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\super-heroi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\super-vilao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amizade.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sair %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\casa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teste heroi.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\humor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\procurando.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\amigo trab ofc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heroi trab ofc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vilao trab ofc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color insert.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color limp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color consul.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\color include.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\fundo alt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menu_princi.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
